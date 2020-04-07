@@ -61,9 +61,9 @@ namespace Taxi.Web.Controllers
                 }
                 catch (Exception ex)
                 {
-                    if(ex.InnerException.Message.Contains("duplicate"))
+                    if (ex.InnerException.Message.Contains("duplicate"))
                     {
-                        ModelState.AddModelError(string.Empty, "Already Exist a Taxi with tha same plaque.");
+                        ModelState.AddModelError(string.Empty, "Already Exists a Taxi with tha same plaque.");
                     }
                     else
                     {
@@ -112,7 +112,7 @@ namespace Taxi.Web.Controllers
                 {
                     if (ex.InnerException.Message.Contains("duplicate"))
                     {
-                        ModelState.AddModelError(string.Empty, "Already Exist a Taxi with tha same plaque.");
+                        ModelState.AddModelError(string.Empty, "Already Exists a Taxi with tha same plaque.");
                     }
                     else
                     {

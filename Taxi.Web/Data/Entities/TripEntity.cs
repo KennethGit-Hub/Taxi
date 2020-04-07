@@ -28,10 +28,10 @@ namespace Taxi.Web.Data.Entities
         [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd hh:mm}", ApplyFormatInEditMode = false)]
         public DateTime? EndDateLocal => EndDate?.ToLocalTime();
 
-        [MaxLength(100, ErrorMessage = "The {0} field must have {1} characters.")]
+        [MaxLength(500, ErrorMessage = "The {0} field must have {1} characters.")]
         public string Source { get; set; }
 
-        [MaxLength(100, ErrorMessage = "The {0} field must have {1} characters.")]
+        [MaxLength(500, ErrorMessage = "The {0} field must have {1} characters.")]
         public string Target { get; set; }
 
         public float Qualification { get; set; }
@@ -47,7 +47,9 @@ namespace Taxi.Web.Data.Entities
         public string Remarks { get; set; }
 
         public TaxiEntity Taxi { get; set; }
+
         public ICollection<TripDetailEntity> TripDetails { get; set; }
+
+        public UserEntity User { get; set; }
     }
 }
-
